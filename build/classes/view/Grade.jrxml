@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="72d97dba-479b-4137-956f-eca8c3e889f1">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="grade" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="text" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT
+     militaire.`IdMilt` AS militaire_IdMilt,
+     militaire.`IdGrade` AS militaire_IdGrade,
+     militaire.`PhotoMilt` AS militaire_PhotoMilt,
+     militaire.`NomMilt` AS militaire_NomMilt,
+     militaire.`Promotion` AS militaire_Promotion,
+     militaire.`DateEntrServ` AS militaire_DateEntrServ,
+     militaire.`Sexe` AS militaire_Sexe,
+     militaire.`Statut` AS militaire_Statut,
+     militaire.`Arme` AS militaire_Arme,
+     militaire.`Specialite` AS militaire_Specialite,
+     militaire.`NumMatr` AS militaire_NumMatr,
+     militaire.`MatrFinance` AS militaire_MatrFinance,
+     militaire.`CIN` AS militaire_CIN,
+     militaire.`Corps` AS militaire_Corps,
+     militaire.`Compagnie` AS militaire_Compagnie,
+     militaire.`DateNaiss` AS militaire_DateNaiss,
+     militaire.`Position` AS militaire_Position,
+     militaire.`RefPosition` AS militaire_RefPosition
+FROM
+     `militaire` militaire
+where 
+militaire.`IdGrade` = $P{grade}]]>
+	</queryString>
+	<field name="militaire_IdMilt" class="java.lang.Long"/>
+	<field name="militaire_IdGrade" class="java.lang.Integer"/>
+	<field name="militaire_PhotoMilt" class="java.lang.String"/>
+	<field name="militaire_NomMilt" class="java.lang.String"/>
+	<field name="militaire_Promotion" class="java.lang.String"/>
+	<field name="militaire_DateEntrServ" class="java.sql.Date"/>
+	<field name="militaire_Sexe" class="java.lang.String"/>
+	<field name="militaire_Statut" class="java.lang.String"/>
+	<field name="militaire_Arme" class="java.lang.String"/>
+	<field name="militaire_Specialite" class="java.lang.String"/>
+	<field name="militaire_NumMatr" class="java.lang.String"/>
+	<field name="militaire_MatrFinance" class="java.lang.String"/>
+	<field name="militaire_CIN" class="java.lang.String"/>
+	<field name="militaire_Corps" class="java.lang.String"/>
+	<field name="militaire_Compagnie" class="java.lang.String"/>
+	<field name="militaire_DateNaiss" class="java.sql.Date"/>
+	<field name="militaire_Position" class="java.lang.String"/>
+	<field name="militaire_RefPosition" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="89" splitType="Stretch">
+			<staticText>
+				<reportElement x="332" y="15" width="222" height="17" uuid="e49f4cef-6b46-462c-b001-f7461ca3f020"/>
+				<text><![CDATA[MINISTERE DE LA DEFENSE NATIONALE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="343" y="32" width="198" height="20" uuid="33ec283f-ada9-4656-bb57-d0d7b360f185"/>
+				<text><![CDATA[DIRECTION DE RESSOURCE HUMAINE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="52" width="138" height="16" uuid="62595733-4173-41e7-a37f-3f9eeb2b1155"/>
+				<text><![CDATA[SERVICE DES EFFECTIFS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="75" y="8" width="646" height="20" uuid="da4fcbf2-338b-4527-95f7-8f964d31f2f3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{text}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="148" height="20" uuid="599fa355-68dc-46ae-a81a-1f6d32399cd7"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Serif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOM ET PRENOM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="148" y="0" width="89" height="20" uuid="9a61d57f-b264-4f43-8800-496fd8534ebc"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Serif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PROMOTION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="237" y="0" width="38" height="20" uuid="e96345c5-c89c-4822-8ff6-e7a7a4854b87"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Serif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SEXE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="275" y="0" width="72" height="20" uuid="17c84631-9921-4361-b2fc-90afad4d6ad0"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Serif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ARME]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="347" y="0" width="85" height="20" uuid="92a6dd1f-9f96-4d7e-878c-ffad3e5da34f"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Serif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SPECIALITE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="432" y="0" width="109" height="20" uuid="99669f9a-2bab-4d81-b9f6-adbfd4238e59"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Serif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MATRICULE FINANCE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="541" y="0" width="125" height="20" uuid="5514016a-50c1-4317-b10a-d3f5294ba4f7"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Serif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CIN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="666" y="0" width="136" height="20" uuid="e6045228-9157-4d64-8e22-dcc0389fce30"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement>
+					<font fontName="Serif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[POSITION ACTUELLE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="148" height="20" uuid="c1b9762f-8f4a-43a1-8276-825ee955ec8d"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{militaire_NomMilt}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="148" y="0" width="89" height="20" uuid="13f8803b-e44f-4975-8a95-a5f293b1cd39"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{militaire_Promotion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="237" y="0" width="38" height="20" uuid="82c6f45d-f1d1-49fa-857e-3488144b701c"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{militaire_Sexe}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="275" y="0" width="72" height="20" uuid="15581f4a-a50c-4f83-a6df-f04ad2698750"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{militaire_Arme}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="347" y="0" width="85" height="20" uuid="58450ade-be96-41bc-9f3c-1787ff5b936f"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{militaire_Specialite}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="432" y="0" width="109" height="20" uuid="f825dd8a-2c45-4cda-a191-ead0ea02a7ca"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{militaire_MatrFinance}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="541" y="0" width="125" height="20" uuid="e2c3c560-e0d9-44e1-8d60-544c8aac1372"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{militaire_CIN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="666" y="0" width="136" height="20" uuid="5d850419-213d-415e-95d0-52fa69aebf14"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{militaire_Position}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
